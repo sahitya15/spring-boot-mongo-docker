@@ -1,7 +1,7 @@
 node{
      
     stage('SCM Checkout'){
-        git url:  'https://github.com/prakashk0301/spring-boot-mongo-docker.git',branch: 'master'
+        git url:  'https://github.com/sahitya15/spring-boot-mongo-docker.git',branch: 'master'
     }
     
     stage(" Maven Clean Package"){
@@ -13,7 +13,7 @@ node{
     
     
     stage('Build Docker Image'){
-        sh 'docker rmi -f chaitanyapratap19/spring-boot-mongo'
+        sh 'docker rmi -f sahitya15/spring-boot-mongo'
         sh 'docker build -t pkw0301/spring-boot-mongo .'
     }
     
